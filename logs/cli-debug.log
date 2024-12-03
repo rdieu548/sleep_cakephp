@@ -1,0 +1,19 @@
+2024-12-03 08:46:26 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $Menus = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/TestCommand.php, line: 493
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/bake/src/Command/TestCommand.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/TestCommand.php, line 493
+Bake\Command\TestCommand->_processController() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/TestCommand.php, line 452
+Bake\Command\TestCommand->generateFixtureList() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/TestCommand.php, line 258
+Bake\Command\TestCommand->bake() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/TestCommand.php, line 132
+Bake\Command\TestCommand->execute() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/ControllerCommand.php, line 207
+Bake\Command\ControllerCommand->bakeTest() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/ControllerCommand.php, line 154
+Bake\Command\ControllerCommand->bake() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/bake/src/Command/ControllerCommand.php, line 64
+Bake\Command\ControllerCommand->execute() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/BaseCommand.php, line 190
+Cake\Console\BaseCommand->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/CommandRunner.php, line 334
+Cake\Console\CommandRunner->runCommand() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/CommandRunner.php, line 172
+Cake\Console\CommandRunner->run() /Users/remidieu/Documents/devlara/monrpojet/bin/cake.php, line 12
+[main]
+

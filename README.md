@@ -50,7 +50,7 @@ MAILGUN_API_KEY=votre_cle_api_mailgun
 1. Cloner le projet :
    ```bash
    git clone https://github.com/rdieu548/sleep_cakephp.git
-   cd projet_cakephp
+   cd sleep_cakephp
    ```
 
 2. Installer les dépendances :

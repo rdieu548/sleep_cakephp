@@ -99,4 +99,5 @@ return function (RouteBuilder $routes): void {
     $routes->connect('/register', ['controller' => 'Users', 'action' => 'register']);
     $routes->connect('/forgot-password', ['controller' => 'Users', 'action' => 'forgotPassword']);
     $routes->connect('/menus/reorder', ['controller' => 'Menus', 'action' => 'reorder']);
+    $routes->connect('/calculate', ['controller' => 'SleepCalculator', 'action' => 'calculate']);
 };

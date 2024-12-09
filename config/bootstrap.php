@@ -227,3 +227,22 @@ TypeFactory::map('time', StringType::class);
 // and https://unicode-org.github.io/icu/userguide/format_parse/datetime/#datetime-format-syntax
 //\Cake\I18n\FrozenDate::setToStringFormat('dd.MM.yyyy');
 //\Cake\I18n\FrozenTime::setToStringFormat('dd.MM.yyyy HH:mm');
+
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+if (file_exists(dirname(__DIR__) . '/.env')) {
+    $content = file_get_contents(dirname(__DIR__) . '/.env');
+    $lines = explode("\n", $content);
+    
+    foreach ($lines as $line) {
+        if (empty($line) || strpos($line, '#') === 0) continue;
+        
+        list($key, $value) = explode('=', $line, 2);
+        $key = trim($key);
+        $value = trim($value);
+        
+        putenv("$key=$value");
+        $_ENV[$key] = $value;
+        $_SERVER[$key] = $value;
+    }
+}

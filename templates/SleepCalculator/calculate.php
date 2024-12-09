@@ -1,116 +1,131 @@
 <div class="row">
-    <div class="column column-100">
-        <div class="sleep-calculator form content">
-            <h3>Calculateur de Sommeil</h3>
-            <?= $this->Form->create(null, ['class' => 'sleep-form']) ?>
-            <fieldset>
-                <legend>Entrez vos horaires de sommeil</legend>
+    <div class="column">
+        <h3>Journal de Sommeil</h3>
+        <?= $this->Form->create(null, ['url' => ['controller' => 'SleepCalculator', 'action' => 'calculate']]) ?>
+        
+        <?= $this->Form->control('date', [
+            'label' => 'Date',
+            'type' => 'date',
+            'value' => date('Y-m-d')
+        ]) ?>
+        
+        <div class="sleep-time-section">
+            <h4>Horaires de Sommeil</h4>
+            <div class="input-group">
                 <?= $this->Form->control('bedtime', [
-                    'label' => 'Heure de coucher',
+                    'label' => 'Heure du coucher',
                     'type' => 'time',
-                    'required' => true
+                    'class' => 'form-control'
                 ]) ?>
-                <?= $this->Form->control('waketime', [
-                    'label' => 'Heure de réveil souhaitée',
+                <?= $this->Form->control('wakeuptime', [
+                    'label' => 'Heure du réveil',
                     'type' => 'time',
-                    'required' => true
+                    'class' => 'form-control'
                 ]) ?>
-            </fieldset>
-            <?= $this->Form->button(__('Calculer'), ['class' => 'button']) ?>
-            <?= $this->Form->end() ?>
+            </div>
         </div>
+
+        <div class="naps-section">
+            <h4>Siestes</h4>
+            <div class="input-group">
+                <?= $this->Form->control('afternoon_nap', [
+                    'label' => 'Sieste après-midi',
+                    'type' => 'checkbox'
+                ]) ?>
+                <?= $this->Form->control('evening_nap', [
+                    'label' => 'Sieste du soir (18h-19h)',
+                    'type' => 'checkbox'
+                ]) ?>
+            </div>
+        </div>
+
+        <div class="wellness-section">
+            <h4>Bien-être</h4>
+            <?= $this->Form->control('morning_score', [
+                'label' => 'Niveau de forme au réveil',
+                'type' => 'select',
+                'options' => array_combine(range(0, 10), range(0, 10)),
+                'empty' => 'Choisir un score (0-10)'
+            ]) ?>
+            
+            <?= $this->Form->control('did_sport', [
+                'label' => 'Activité sportive aujourd\'hui',
+                'type' => 'checkbox'
+            ]) ?>
+            
+            <?= $this->Form->control('comments', [
+                'label' => 'Commentaires sur votre sommeil',
+                'type' => 'textarea',
+                'placeholder' => 'Comment vous sentez-vous ? Qualité du sommeil ?'
+            ]) ?>
+        </div>
+
+        <?= $this->Form->button('Analyser mon sommeil', ['class' => 'btn btn-primary']) ?>
+        <?= $this->Form->end() ?>
+
+        <?php if (isset($result)): ?>
+            <div class="results">
+                <h4>Analyse de votre sommeil :</h4>
+                <?php if ($result): ?>
+                    <div class="sleep-stats">
+                        <p>Durée totale : <?= $result['hours'] ?>h<?= $result['minutes'] ?>min</p>
+                        <p>Nombre de cycles : <?= $result['cycles'] ?></p>
+                        <div class="cycle-indicator <?= $result['isOptimalCycle'] ? 'optimal' : '' ?>">
+                            <?= $result['isOptimalCycle'] ? '✓ Cycles optimaux' : '! Cycles non optimaux' ?>
+                        </div>
+                        <?php if ($result['cycles'] >= 5): ?>
+                            <div class="cycle-success">
+                                ✓ Objectif atteint : 5 cycles ou plus
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 
 <style>
-    .row {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
+.input-group {
+    margin-bottom: 20px;
+}
 
-    .column-100 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+.sleep-time-section,
+.naps-section,
+.wellness-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
 
-    .sleep-calculator {
-        max-width: 500px;
-        width: 100%;
-        margin: 50px 0;
-        padding: 20px;
-    }
+.results {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
 
-    .sleep-form {
-        background: #f8f9fa;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        width: 100%;
-    }
+.cycle-indicator {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
 
-    h3 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.cycle-indicator.optimal {
+    background: #28a745;
+    color: white;
+}
 
-    fieldset {
-        border: none;
-        padding: 0;
-        margin-bottom: 20px;
-    }
+.cycle-success {
+    background: #198754;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
 
-    legend {
-        font-size: 1.2em;
-        margin-bottom: 15px;
-        color: #333;
-        text-align: center;
-    }
-
-    .input {
-        margin-bottom: 15px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-        color: #666;
-    }
-
-    input[type="time"] {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        margin-bottom: 10px;
-    }
-
-    .button {
-        width: 100%;
-        padding: 10px;
-        background: #D33C43 !important;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .button:hover {
-        background: #C13238 !important;
-    }
-
-    @media (max-width: 768px) {
-        .sleep-calculator {
-            padding: 10px;
-            margin: 20px 0;
-        }
-
-        .sleep-form {
-            padding: 15px;
-        }
-    }
+.btn-primary {
+    margin-top: 20px;
+}
 </style>

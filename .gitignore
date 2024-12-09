@@ -1,1 +1,27 @@
 .env
+
+# Exclure phpmyadmin
+phpmyadmin/
+/phpmyadmin
+/phpmyadmin/*
+
+# Logs
+/logs/*
+/tmp/logs/*
+*.log
+/tmp/debug.log
+/tmp/error.log
+/tmp/cache/models/*
+/tmp/cache/persistent/*
+/tmp/cache/views/*
+
+# CakePHP specific files
+/config/.env
+/config/app_local.php
+/tmp/*
+/logs/*
+/tmp/cache/models/*
+/tmp/cache/persistent/*
+/tmp/cache/views/*
+/tmp/sessions/*
+/tmp/tests/*

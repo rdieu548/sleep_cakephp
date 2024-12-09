@@ -14,9 +14,10 @@ use Cake\Http\MiddlewareQueue;
 use Cake\ORM\Locator\TableLocator;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+use Cake\Routing\Router;
+use Authentication\AuthenticationService;
 use Authentication\AuthenticationServiceInterface;
 use Authentication\AuthenticationServiceProviderInterface;
-use Authentication\AuthenticationService;
 use Authentication\Middleware\AuthenticationMiddleware;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -68,11 +69,16 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
         $middlewareQueue
-            ->add(new ErrorHandlerMiddleware(Configure::read('Error'), $this))
-            ->add(new AssetMiddleware())
-            ->add(new BodyParserMiddleware(['json' => true, 'form' => true]))
+            ->add(new ErrorHandlerMiddleware(Configure::read('Error')))
+            ->add(new AssetMiddleware([
+                'cacheTime' => Configure::read('Asset.cacheTime'),
+            ]))
             ->add(new RoutingMiddleware($this))
-            ->add(new AuthenticationMiddleware($this));
+            ->add(new BodyParserMiddleware())
+            ->add(new AuthenticationMiddleware($this))
+            ->add(new CsrfProtectionMiddleware([
+                'httponly' => true,
+            ]));
 
         return $middlewareQueue;
     }
@@ -107,22 +113,21 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $authenticationService = new AuthenticationService([
-            'unauthenticatedRedirect' => '/login',
+            'unauthenticatedRedirect' => '/users/login',
             'queryParam' => 'redirect',
         ]);
 
         $authenticationService->loadIdentifier('Authentication.Password', [
             'fields' => [
                 'username' => 'email',
-                'password' => 'password'
+                'password' => 'password',
+                'is_admin' => 'is_admin'
             ],
             'resolver' => [
                 'className' => 'Authentication.Orm',
                 'userModel' => 'Users',
-                'passwordHasher' => [
-                    'className' => 'Authentication.DefaultPasswordHasher',
-                ],
-            ],
+                'finder' => 'auth'
+            ]
         ]);
 
         $authenticationService->loadAuthenticator('Authentication.Session');
@@ -131,7 +136,10 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 'username' => 'email',
                 'password' => 'password'
             ],
-            'loginUrl' => '/login'
+            'loginUrl' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ]
         ]);
 
         return $authenticationService;

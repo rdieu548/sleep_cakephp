@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Controller;
 
@@ -8,34 +9,41 @@ use Cake\Mailer\Email;
 use Cake\Mailer\Mailer;
 use Cake\Mailer\TransportFactory;
 use Mailgun\Mailgun;
+use Cake\Event\EventInterface;
 
 class UsersController extends AppController
 {
-    public function beforeFilter(\Cake\Event\EventInterface $event)
+    public function beforeFilter(EventInterface $event)
     {
         parent::beforeFilter($event);
-        
-        $this->Authentication->allowUnauthenticated(['login', 'register', 'forgotPassword']);
+        $this->Authentication->allowUnauthenticated(['login', 'add']);
     }
 
     public function login()
     {
         $result = $this->Authentication->getResult();
         
+        if ($result->isValid()) {
+            $target = $this->Authentication->getLoginRedirect() ?? '/sleep-calculator';
+            return $this->redirect($target);
+        }
+        
         if ($this->request->is('post')) {
-            if ($result->isValid()) {
-                // Redirection après connexion réussie
-                $target = $this->Authentication->getLoginRedirect() ?? '/';
-                return $this->redirect($target);
+            parse_str($this->request->getBody()->getContents(), $postData);
+            
+            $user = $this->Users->find()
+                ->where(['email' => $postData['email']])
+                ->first();
+                
+            if ($user) {
+                $hasher = new \Authentication\PasswordHasher\DefaultPasswordHasher();
+                if ($hasher->check($postData['password'], $user->password)) {
+                    $this->Authentication->setIdentity($user);
+                    return $this->redirect('/');
+                }
             }
             
-            // En cas d'échec de connexion
             $this->Flash->error('Email ou mot de passe incorrect.');
-        }
-
-        // Si l'utilisateur est déjà connecté, redirigez-le
-        if ($result->isValid()) {
-            return $this->redirect('/');  // Redirection vers la page d'accueil
         }
     }
 
@@ -48,18 +56,23 @@ class UsersController extends AppController
     public function register()
     {
         $user = $this->Users->newEmptyEntity();
+        
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             
-            // Log the hashed password
-            Log::debug('Mot de passe haché : ' . $user->password);
-
+            // Définir is_admin à false par défaut
+            $user->is_admin = false;
+            
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('Inscription réussie.'));
+                $this->Flash->success('Inscription réussie. Vous pouvez maintenant vous connecter.');
                 return $this->redirect(['action' => 'login']);
             }
-            $this->Flash->error(__('L\'inscription a échoué. Veuillez réessayer.'));
+            
+            if ($user->getErrors()) {
+                $this->Flash->error('Impossible de créer le compte. Veuillez corriger les erreurs.');
+            }
         }
+        
         $this->set(compact('user'));
     }
 
@@ -152,6 +165,12 @@ class UsersController extends AppController
 
     public function index()
     {
+        // Vérifier si l'utilisateur est admin
+        if (!$this->Authentication->getIdentity()->get('is_admin')) {
+            $this->Flash->error('Accès non autorisé.');
+            return $this->redirect(['controller' => 'SleepCalculator', 'action' => 'index']);
+        }
+        
         $this->paginate = [
             'limit' => 10,  // nombre d'éléments par page
             'order' => [
@@ -178,27 +197,100 @@ class UsersController extends AppController
     public function edit($id = null)
     {
         $user = $this->Users->get($id);
+        $currentUser = $this->request->getAttribute('identity');
+        
+        // Vérifier les permissions
+        if (!$currentUser->is_admin && $currentUser->id !== $user->id) {
+            $this->Flash->error('Vous n\'avez pas la permission de modifier cet utilisateur.');
+            return $this->redirect(['action' => 'index']);
+        }
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $data = $this->request->getData();
             
-            // Si le mot de passe est vide, on le retire des données à mettre à jour
-            if (empty($data['password'])) {
-                unset($data['password']);
+            // Ne permettre que certains champs selon le rôle
+            if (!$currentUser->is_admin) {
+                unset($data['is_admin']); // Seuls les admins peuvent changer ce statut
             }
             
+            // Gérer le changement de mot de passe
+            if (!empty($data['new_password'])) {
+                if ($data['new_password'] === $data['confirm_password']) {
+                    $data['password'] = $data['new_password']; // Le hachage sera fait automatiquement
+                } else {
+                    $this->Flash->error('Les mots de passe ne correspondent pas.');
+                    $this->set(compact('user'));
+                    return;
+                }
+            }
+            
+            // Supprimer les champs de mot de passe temporaires
+            unset($data['new_password']);
+            unset($data['confirm_password']);
+            
             $user = $this->Users->patchEntity($user, $data);
+            
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('L\'utilisateur a été modifié.'));
+                $this->Flash->success('Les modifications ont été enregistrées.');
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('L\'utilisateur n\'a pas pu être modifié. Veuillez réessayer.'));
+            $this->Flash->error('Impossible d\'enregistrer les modifications.');
         }
+        
         $this->set(compact('user'));
     }
 
     public function view($id = null)
     {
         $user = $this->Users->get($id);
+        $this->set(compact('user'));
+    }
+
+    // Ajouter cette méthode pour définir un utilisateur comme admin
+    public function makeAdmin($id = null)
+    {
+        if (!$this->Authentication->getIdentity()->get('is_admin')) {
+            $this->Flash->error('Accès non autorisé.');
+            return $this->redirect(['action' => 'index']);
+        }
+
+        $user = $this->Users->get($id);
+        $user->is_admin = true;
+        
+        if ($this->Users->save($user)) {
+            $this->Flash->success('L\'utilisateur est maintenant administrateur.');
+        } else {
+            $this->Flash->error('Impossible de modifier les droits de l\'utilisateur.');
+        }
+        
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function add()
+    {
+        $user = $this->Users->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $data = $this->request->getData();
+            $user = $this->Users->patchEntity($user, $data);
+            $user->actif = true;
+            $user->is_admin = false;
+            
+            // Debug du mot de passe avant hachage
+            $originalPassword = $data['password'];
+            
+            if ($this->Users->save($user)) {
+                debug([
+                    'original_password' => $originalPassword,
+                    'hashed_password' => $user->password
+                ]);
+                
+                $this->Flash->success('Inscription réussie.');
+                return $this->redirect(['action' => 'login']);
+            }
+            
+            $this->Flash->error('Erreur lors de l\'inscription.');
+            debug($user->getErrors());
+        }
         $this->set(compact('user'));
     }
 }

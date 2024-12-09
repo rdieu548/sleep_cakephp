@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
+        CakeSleepCalculator:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>">WebApp</a>
+            <a href="<?= $this->Url->build('/') ?>">CakeSleepCalculator</a>
         </div>
         <div class="top-nav-links">
             <?php if ($current_user): ?>
@@ -240,11 +240,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <div class="column column-25" id="menu">
                             <ul class="side-nav">
-                                <?php foreach ($menus as $menu): ?>
-                                    <li class="menu-item">
-                                        <?= $this->Html->link($menu->intitule, $menu->lien, ['class' => 'menu-link']) ?>
-                                    </li>
-                                <?php endforeach; ?>
+                                <?php if ($this->Identity->isLoggedIn()): ?>
+                                    <?php 
+                                        $currentUser = $this->request->getAttribute('identity');
+                                        
+                                        // Si admin, afficher tous les menus
+                                        if ((int)$currentUser->is_admin === 1) {
+                                            echo $this->cell('Menu::display')->render();
+                                        } else {
+                                            // Pour les utilisateurs normaux, ne pas afficher le menu Utilisateurs
+                                            echo $this->cell('Menu::display', ['hideAdmin' => true])->render();
+                                        }
+                                    ?>
+                                <?php endif; ?>
                             </ul>
                         </div>
                         <div class="column column-75">

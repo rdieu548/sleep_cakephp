@@ -56,7 +56,9 @@
             <?= $this->Form->control('comments', [
                 'label' => 'Commentaires sur votre sommeil',
                 'type' => 'textarea',
-                'placeholder' => 'Comment vous sentez-vous ? Qualité du sommeil ?'
+                'required' => false,
+                'default' => '',
+                'empty' => true
             ]) ?>
         </div>
 

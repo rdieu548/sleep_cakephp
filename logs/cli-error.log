@@ -263,3 +263,48 @@ Stack Trace:
 - /Users/remidieu/Documents/devlara/monrpojet/bin/cake.php:12
 - [main]:
 
+2024-12-09 09:33:26 error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'webapp_cake' in /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 98
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/MysqlAdapter.php:158
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:163
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:469
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/CakeAdapter.php:51
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:83
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php:64
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/Phinx/Migrate.php:85
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Command/Command.php:326
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Application.php:1078
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Application.php:324
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Application.php:175
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/BaseCommand.php:190
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/CommandRunner.php:334
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/CommandRunner.php:172
+- /Users/remidieu/Documents/devlara/monrpojet/bin/cake.php:12
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'webapp_cake' in /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 86
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/MysqlAdapter.php:158
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php:163
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php:469
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/CakeAdapter.php:51
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:83
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php:64
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/Phinx/CommandTrait.php:37
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/Phinx/Migrate.php:85
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Command/Command.php:326
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Application.php:1078
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Application.php:324
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/symfony/console/Application.php:175
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:126
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/BaseCommand.php:190
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/migrations/src/Command/MigrationsCommand.php:198
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/CommandRunner.php:334
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Console/CommandRunner.php:172
+- /Users/remidieu/Documents/devlara/monrpojet/bin/cake.php:12
+- [main]:
+

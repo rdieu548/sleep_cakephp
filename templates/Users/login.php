@@ -3,42 +3,45 @@
  * @var \App\View\AppView $this
  */
 ?>
-<div class="users form content">
-    <h3>Connexion</h3>
+<div class="users form">
+    <?= $this->Flash->render() ?>
     <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __('Veuillez entrer vos identifiants') ?></legend>
-        <?= $this->Form->control('email', ['label' => 'Email']) ?>
-        <?= $this->Form->control('password', ['label' => 'Mot de passe']) ?>
+        <legend><?= __('Connexion') ?></legend>
+        <?= $this->Form->control('email', ['required' => true]) ?>
+        <?= $this->Form->control('password', ['required' => true, 'label' => 'Mot de passe']) ?>
     </fieldset>
-    <?= $this->Form->button(__('Connexion'), ['class' => 'button']) ?>
+    <?= $this->Form->button(__('Se connecter')); ?>
     <?= $this->Form->end() ?>
-
-    <div class="additional-links">
-        <?= $this->Html->link('Mot de passe oublié ?', ['action' => 'forgotPassword']) ?>
-        <br>
-        <?= $this->Html->link('S\'enregistrer', ['action' => 'register']) ?>
-    </div>
+    
+    <p class="text-center">
+        <?= $this->Html->link("S'inscrire", ['action' => 'add']) ?>
+    </p>
 </div>
 
 <style>
-    .users.form.content {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+.users.form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-    .additional-links {
-        margin-top: 20px;
-        text-align: center;
-    }
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
 
-    .additional-links a {
-        color: #D33C43;
-        text-decoration: none;
-    }
+legend {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-    .additional-links a:hover {
-        text-decoration: underline;
-    }
+.input {
+    margin-bottom: 15px;
+}
 </style>

@@ -16,7 +16,6 @@ class SleepCalculatorController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
-        // Vérifier si l'utilisateur est connecté
         if (!$this->Authentication->getIdentity()) {
             $this->Flash->error('Veuillez vous connecter pour accéder à votre journal de sommeil.');
             return $this->redirect(['controller' => 'Users', 'action' => 'login']);
@@ -25,28 +24,76 @@ class SleepCalculatorController extends AppController
 
     public function index()
     {
-        $userId = $this->Authentication->getIdentity()->id;
-        $entries = $this->SleepEntries->find()
-            ->where(['user_id' => $userId])
-            ->order(['date' => 'DESC'])
-            ->limit(7)
-            ->all();
+        $user = $this->request->getAttribute('identity');
         
-        $this->set(compact('entries'));
+        // Définir la période avec FrozenTime
+        $startOfWeek = FrozenTime::now()->startOfWeek();
+        $endOfWeek = FrozenTime::now()->endOfWeek();
+        
+        // Récupérer les entrées de sommeil de la semaine
+        $sleepEntries = $this->fetchTable('SleepEntries')->find()
+            ->where([
+                'user_id' => $user->id,
+                'date >=' => $startOfWeek,
+                'date <=' => $endOfWeek
+            ])
+            ->order(['date' => 'DESC'])
+            ->toArray();
+        
+        // Calculer les statistiques
+        $totalSleep = 0;
+        $totalCycles = 0;
+        $entriesCount = count($sleepEntries);
+        $objectifAtteint = 0;
+        
+        foreach ($sleepEntries as $entry) {
+            // Calculer la durée de sommeil en heures
+            $dateStr = $entry->date instanceof FrozenDate ? $entry->date->format('Y-m-d') : $entry->date;
+            $bedtime = FrozenTime::parse($dateStr . ' ' . $entry->bedtime);
+            $wakeuptime = FrozenTime::parse($dateStr . ' ' . $entry->wakeuptime);
+            
+            // Si l'heure de réveil est avant l'heure de coucher, ajouter 1 jour
+            if ($wakeuptime < $bedtime) {
+                $wakeuptime = $wakeuptime->modify('+1 day');
+            }
+            
+            $duration = ($wakeuptime->getTimestamp() - $bedtime->getTimestamp()) / 3600;
+            $entry->sleep_duration = round($duration, 1);
+            
+            $totalSleep += $entry->sleep_duration;
+            $totalCycles += $entry->cycles ?? floor($entry->sleep_duration / 1.5);
+            
+            if ($entry->sleep_duration >= 7) {
+                $objectifAtteint++;
+            }
+        }
+        
+        // Objectif hebdomadaire (par exemple, 35 cycles par semaine)
+        $weeklyGoal = 35;
+        $isWeeklyGoalMet = $totalCycles >= $weeklyGoal;
+        
+        $stats = [
+            'moyenne' => $entriesCount > 0 ? round($totalSleep / $entriesCount, 1) : 0,
+            'objectif_atteint' => $entriesCount > 0 ? round(($objectifAtteint / $entriesCount) * 100) : 0,
+            'nombre_entrees' => $entriesCount,
+            'derniere_semaine' => $sleepEntries,
+            'total_cycles' => $totalCycles,
+            'objectif_cycles' => $weeklyGoal,
+            'objectif_atteint_cycles' => $isWeeklyGoalMet
+        ];
+        
+        $this->set(compact('stats', 'startOfWeek', 'endOfWeek', 'totalCycles', 'isWeeklyGoalMet'));
     }
 
     public function calculate()
     {
-        $userId = $this->Authentication->getIdentity()->id;
-        
         if ($this->request->is('post')) {
             $data = $this->request->getData();
+            $userId = $this->Authentication->getIdentity()->id;
             
-            // Formatage des heures
             $bedtime = date('H:i:s', strtotime($data['bedtime']));
             $wakeuptime = date('H:i:s', strtotime($data['wakeuptime']));
             
-            // Calcul des cycles
             $bedDateTime = new \DateTime($bedtime);
             $wakeDateTime = new \DateTime($wakeuptime);
             
@@ -59,9 +106,8 @@ class SleepCalculatorController extends AppController
             $cycles = $totalMinutes / 90;
             $isOptimalCycle = abs($cycles - round($cycles)) <= (10/90);
             
-            // Préparation des données
             $entryData = [
-                'user_id' => $userId,  // Ajout de l'ID utilisateur
+                'user_id' => $userId,
                 'date' => $data['date'] ? new FrozenDate($data['date']) : new FrozenDate(),
                 'bedtime' => $bedtime,
                 'wakeuptime' => $wakeuptime,
@@ -69,7 +115,7 @@ class SleepCalculatorController extends AppController
                 'evening_nap' => !empty($data['evening_nap']),
                 'morning_score' => (int)$data['morning_score'],
                 'did_sport' => !empty($data['did_sport']),
-                'comments' => $data['comments'],
+                'comments' => !empty($data['comments']) ? $data['comments'] : null,
                 'cycles' => floor($cycles),
                 'is_optimal_cycle' => $isOptimalCycle
             ];

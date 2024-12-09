@@ -40,5 +40,6 @@ class AppView extends View
         parent::initialize();
         
         $this->loadHelper('Authentication');
+        $this->loadHelper('Authentication.Identity');
     }
 }

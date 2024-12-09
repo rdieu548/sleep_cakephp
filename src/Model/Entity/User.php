@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Model\Entity;
 
@@ -12,18 +13,21 @@ class User extends Entity
         'password' => true,
         'nom' => true,
         'prenom' => true,
-        '*' => false,
+        'actif' => true,
+        'is_admin' => true,
+        'observation' => true,
+        'created' => true,
+        'modified' => true,
     ];
 
     protected $_hidden = [
-        'password'
+        'password',
     ];
 
-    protected function _setPassword(string $password)
+    protected function _setPassword(string $password) : ?string
     {
         if (strlen($password) > 0) {
-            $hasher = new DefaultPasswordHasher();
-            return $hasher->hash($password);
+            return (new DefaultPasswordHasher())->hash($password);
         }
     }
 } 

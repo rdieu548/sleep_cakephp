@@ -37,6 +37,7 @@ Créez un fichier `.env` à la racine du projet avec :
 ```
 DB_USERNAME=votre_utilisateur
 DB_PASSWORD=votre_mot_de_passe
+DB_DATABASE=webapp_cake
 MAILGUN_HOST=smtp.mailgun.org
 MAILGUN_USERNAME=votre_username_mailgun
 MAILGUN_FROM_EMAIL=votre_email_mailgun
@@ -48,8 +49,8 @@ MAILGUN_API_KEY=votre_cle_api_mailgun
 
 1. Cloner le projet :
    ```bash
-   git clone [url-du-projet]
-   cd [nom-du-projet]
+   git clone https://github.com/rdieu548/projet_cakephp.git
+   cd projet_cakephp
    ```
 
 2. Installer les dépendances :
@@ -59,7 +60,7 @@ MAILGUN_API_KEY=votre_cle_api_mailgun
 
 3. Créer la base de données :
    ```sql
-   CREATE DATABASE laravel;
+   CREATE DATABASE webapp_cake;
    ```
 
 4. Créer les tables :

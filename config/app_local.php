@@ -39,7 +39,7 @@ return [
             'host' => 'localhost',
             'username' => getenv('DB_USERNAME'),
             'password' => getenv('DB_PASSWORD'),
-            'database' => 'laravel',
+            'database' => 'webapp_cake',
             'driver' => 'Cake\Database\Driver\Mysql',
             'port' => '3306'
         ],

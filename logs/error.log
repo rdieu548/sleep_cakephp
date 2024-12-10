@@ -19478,3 +19478,271 @@ Stack Trace:
 
 Request URL: /users/edit/1
 Referer URL: http://localhost:8765/users/edit/1
+2024-12-10 08:00:12 error: [Cake\Http\Exception\MissingControllerException] Controller class Monapp could not be found. in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'Monapp',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'Monapp',
+)
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:75
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /monapp
+2024-12-10 09:13:33 error: [Cake\Http\Exception\MissingControllerException] Controller class Sleeps could not be found. in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'Sleeps',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'Sleeps',
+)
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:75
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /sleeps
+Referer URL: http://localhost:8765/
+2024-12-10 09:13:36 error: [Cake\Http\Exception\MissingControllerException] Controller class Sleeps could not be found. in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'Sleeps',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'Sleeps',
+)
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:75
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /sleeps/add
+Referer URL: http://localhost:8765/
+2024-12-10 09:14:22 error: [Cake\Http\Exception\MissingControllerException] Controller class AppleTouchIconPrecomposed.png could not be found. in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'AppleTouchIconPrecomposed.png',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'AppleTouchIconPrecomposed.png',
+)
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:323
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:73
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:166
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /apple-touch-icon-precomposed.png
+2024-12-10 09:14:22 error: [Cake\Http\Exception\MissingControllerException] Controller class AppleTouchIcon.png could not be found. in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'AppleTouchIcon.png',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'AppleTouchIcon.png',
+)
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:323
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:73
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:166
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /apple-touch-icon.png
+2024-12-10 09:14:39 error: [Cake\Core\Exception\CakeException] Could not start the session, headers already sent in file `CORE/src/Error/Debugger.php` on line `1151` in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Session.php on line 518
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/FlashMessage.php:123
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/FlashComponent.php:76
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/FlashComponent.php:184
+- /Users/remidieu/Documents/devlara/monrpojet/src/Controller/UsersController.php:287
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php:560
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:140
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:115
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:325
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:162
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /users/add
+Referer URL: http://localhost:8765/users/add
+2024-12-10 09:14:39 warning: Unable to emit headers. Headers sent in file=/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Debugger.php line=1151
+Request URL: /users/add
+Referer URL: http://localhost:8765/users/add
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 09:14:39 warning: Cannot modify header information - headers already sent by (output started at /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Debugger.php:1151)
+Request URL: /users/add
+Referer URL: http://localhost:8765/users/add
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 09:14:39 warning: Cannot modify header information - headers already sent by (output started at /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Debugger.php:1151)
+Request URL: /users/add
+Referer URL: http://localhost:8765/users/add
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 09:14:39 warning: Cannot modify header information - headers already sent by (output started at /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Debugger.php:1151)
+Request URL: /users/add
+Referer URL: http://localhost:8765/users/add
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 09:15:39 error: [Cake\Http\Exception\MissingControllerException] Controller class Sleeps could not be found. in /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'Sleeps',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'Sleeps',
+)
+Stack Trace:
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:75
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php:145
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php:40
+- [main]:
+
+Request URL: /sleeps/add
+Referer URL: http://localhost:8765/

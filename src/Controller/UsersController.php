@@ -275,21 +275,13 @@ class UsersController extends AppController
             $user->actif = true;
             $user->is_admin = false;
             
-            // Debug du mot de passe avant hachage
-            $originalPassword = $data['password'];
-            
             if ($this->Users->save($user)) {
-                debug([
-                    'original_password' => $originalPassword,
-                    'hashed_password' => $user->password
-                ]);
-                
                 $this->Flash->success('Inscription réussie.');
                 return $this->redirect(['action' => 'login']);
             }
             
             $this->Flash->error('Erreur lors de l\'inscription.');
-            debug($user->getErrors());
+            Log::debug($user->getErrors());
         }
         $this->set(compact('user'));
     }

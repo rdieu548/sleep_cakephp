@@ -35,78 +35,63 @@ La base de données comprend deux tables principales :
 Créez un fichier `.env` à la racine du projet avec :
 
 ```
+# Base de données
 DB_USERNAME=votre_utilisateur
 DB_PASSWORD=votre_mot_de_passe
 DB_DATABASE=webapp_cake
+
+# Mailgun (à configurer avec vos informations Mailgun)
 MAILGUN_HOST=smtp.mailgun.org
 MAILGUN_USERNAME=votre_username_mailgun
+MAILGUN_PASSWORD=votre_password_mailgun
 MAILGUN_FROM_EMAIL=votre_email_mailgun
-MAILGUN_FROM_NAME=WebAPP
-MAILGUN_API_KEY=votre_cle_api_mailgun
+MAILGUN_FROM_NAME=CakeSleepCalculator
 ```
+
+Remplacez les valeurs par vos propres informations de connexion. Pour Mailgun, vous devez utiliser les identifiants fournis dans votre compte Mailgun.
 
 ## Installation
 
-1. Cloner le projet :
+1. Clonez le projet :
    ```bash
    git clone https://github.com/rdieu548/sleep_cakephp.git
    cd sleep_cakephp
    ```
 
-2. Installer les dépendances :
+2. Installez les dépendances :
    ```bash
    composer install
    ```
 
-3. Créer la base de données :
+3. Créez la base de données :
    ```sql
    CREATE DATABASE webapp_cake;
    ```
 
-4. Créer les tables :
-   ```sql
-   -- Table users (si non existante)
-   CREATE TABLE users (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       email VARCHAR(255) NOT NULL UNIQUE,
-       password VARCHAR(255) NOT NULL,
-       created DATETIME DEFAULT CURRENT_TIMESTAMP,
-       modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-   );
-
-   -- Table sleep_entries
-   CREATE TABLE sleep_entries (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       user_id INT NOT NULL,
-       date DATE NOT NULL,
-       bedtime TIME NOT NULL,
-       wakeuptime TIME NOT NULL,
-       afternoon_nap BOOLEAN DEFAULT FALSE,
-       evening_nap BOOLEAN DEFAULT FALSE,
-       morning_score INT,
-       did_sport BOOLEAN DEFAULT FALSE,
-       comments TEXT,
-       cycles INT,
-       is_optimal_cycle BOOLEAN DEFAULT FALSE,
-       created DATETIME DEFAULT CURRENT_TIMESTAMP,
-       modified DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-       FOREIGN KEY (user_id) REFERENCES users(id)
-   );
+4. Configurez le fichier `.env` avec vos informations de base de données :
+   ```plaintext
+   # Base de données
+   DB_USERNAME=votre_utilisateur
+   DB_PASSWORD=votre_mot_de_passe
+   DB_DATABASE=webapp_cake
    ```
 
-5. Configurer le fichier `.env`
+5. Exécutez les migrations pour créer les tables :
+   ```bash
+   bin/cake migrations migrate
+   ```
 
-6. Lancer le serveur de développement :
+6. Lancez le serveur de développement :
    ```bash
    bin/cake server
    ```
 
 ## Utilisation
 
-1. Créer un compte utilisateur via `/register`
-2. Se connecter via `/login`
-3. Accéder au journal de sommeil via `/sleep-calculator`
-4. Ajouter une nouvelle entrée via `/calculate`
+1. Créez un compte utilisateur via `/register`
+2. Connectez-vous via `/login`
+3. Accédez au journal de sommeil via `/sleep-calculator`
+4. Ajoutez une nouvelle entrée via `/calculate`
 
 ## Structure du Projet
 

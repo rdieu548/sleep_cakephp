@@ -26926,3 +26926,573 @@ Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakep
 Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
 [main]
 
+2024-12-10 07:52:55 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /calculate
+Referer URL: http://localhost:8765/
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:52:55 notice: PaginatorComponent is deprecated, use a Cake\Datasource\Pagination\NumericPaginator instance directly.
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php, line: 133
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /login
+Referer URL: http://localhost:8765/
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php, line 55
+Cake\Controller\Component\PaginatorComponent->__construct() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php, line 133
+Cake\Controller\ComponentRegistry->_create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php, line 111
+Cake\Core\ObjectRegistry->load() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 317
+Cake\Controller\Controller->loadComponent() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/UsersController.php, line 163
+App\Controller\UsersController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:53:03 notice: PaginatorComponent is deprecated, use a Cake\Datasource\Pagination\NumericPaginator instance directly.
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php, line: 133
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /login
+Referer URL: http://localhost:8765/login
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php, line 55
+Cake\Controller\Component\PaginatorComponent->__construct() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php, line 133
+Cake\Controller\ComponentRegistry->_create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php, line 111
+Cake\Core\ObjectRegistry->load() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 317
+Cake\Controller\Controller->loadComponent() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/UsersController.php, line 163
+App\Controller\UsersController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 162
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:53:06 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:53:16 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /calculate
+Referer URL: http://localhost:8765/
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:53:23 notice: PaginatorComponent is deprecated, use a Cake\Datasource\Pagination\NumericPaginator instance directly.
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php, line: 133
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /users
+Referer URL: http://localhost:8765/calculate
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Component/PaginatorComponent.php, line 55
+Cake\Controller\Component\PaginatorComponent->__construct() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ComponentRegistry.php, line 133
+Cake\Controller\ComponentRegistry->_create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/ObjectRegistry.php, line 111
+Cake\Core\ObjectRegistry->load() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 317
+Cake\Controller\Controller->loadComponent() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/UsersController.php, line 163
+App\Controller\UsersController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:53:24 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/users
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:01 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/menus
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:26 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /calculate
+Referer URL: http://localhost:8765/menus
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:35 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/calculate
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:35 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/sleep-calculator
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:52 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /calculate
+Referer URL: http://localhost:8765/menus
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:54 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/calculate
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:56 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /calculate
+Referer URL: http://localhost:8765/sleep-calculator
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:54:59 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/calculate
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:55:00 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /calculate
+Referer URL: http://localhost:8765/sleep-calculator
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
+2024-12-10 07:55:04 notice: 4.5.0 - Dynamic properties will be removed in PHP 8.2. Add `public $SleepEntries = null;` to your class definition or use `#[AllowDynamicProperties]` attribute.
+/Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line: 13
+You can disable all deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED`. Adding `src/Controller/SleepCalculatorController.php` to `Error.ignoredDeprecationPaths` in your `config/app.php` config will mute deprecations from that file only.
+Request URL: /sleep-calculator
+Referer URL: http://localhost:8765/calculate
+Trace:
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Core/functions.php, line 318
+/Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php, line 121
+Cake\Controller\Controller->loadModel() /Users/remidieu/Documents/devlara/monrpojet/src/Controller/SleepCalculatorController.php, line 13
+App\Controller\SleepCalculatorController->initialize() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/Controller.php, line 242
+Cake\Controller\Controller->__construct() [internal], line ??
+ReflectionClass->newInstance() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 88
+Cake\Controller\ControllerFactory->create() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\BaseApplication->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 86
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 176
+Cake\Http\Middleware\CsrfProtectionMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/authentication/src/Middleware/AuthenticationMiddleware.php, line 145
+Authentication\Middleware\AuthenticationMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Middleware\BodyParserMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 189
+Cake\Routing\Middleware\RoutingMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Routing\Middleware\AssetMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 149
+Cake\Error\Middleware\ErrorHandlerMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+DebugKit\Middleware\DebugKitMiddleware->process() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 82
+Cake\Http\Runner->handle() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Runner.php, line 67
+Cake\Http\Runner->run() /Users/remidieu/Documents/devlara/monrpojet/vendor/cakephp/cakephp/src/Http/Server.php, line 99
+Cake\Http\Server->run() /Users/remidieu/Documents/devlara/monrpojet/webroot/index.php, line 40
+[main]
+
